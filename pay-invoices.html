@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docsbase - Payment Options</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="#">
+            <img src="img/header__logo.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="payment-welcomescreen" style="background-image: url(img/payment_welcomescreen.jpg);">
+      <div class="container">
+        <div class="welcomescreen__title">
+          <h1>
+            Payment Options
+          </h1>
+        </div>
+        <div class="welcomescreen__subtitle">
+          <h3>
+            Below, we have listed several options to provide payment for our services. Credit / Debit Card payment or
+            PayPal payment options offers an instant payment processing. Bank transfer or Revolut may take a few days to
+            complete the transaction, so please save the payment confirmation and let us know when the payment is done,
+            so we could proceed with our work.
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment">
+      <div class="container">
+        <div class="payment__content">
+
+          <form action="">
+
+
+            <div class="payment__content-row">
+              <div class="payment__content-title">
+                1. Fill out the form
+              </div>
+              <div class="payment__content-form">
+
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input class="inputwrap" id="name" type="text">
+                </div>
+
+                <div class="form-group">
+                  <label for="surename">Surename</label>
+                  <input class="inputwrap" id="surename" type="text">
+                </div>
+
+                <div class="form-group">
+                  <label for="amount">Amount to pay</label>
+                  <input class="inputwrap" id="amount" type="text">
+                </div>
+              </div>
+            </div>
+
+            <div class="payment__content-row">
+              <div class="payment__content-title">
+                2. Chose your payment method
+              </div>
+              <div class="payment__content-box">
+
+                <div class="payment__box-row">
+                  <div class="payment__box-btn">
+                    <input class="payment-method" type="radio" name="pay" id="credit" value="credit">
+                    <label for="credit">Credit/Debit card</label>
+                  </div>
+                  <div class="payment__box-text">
+                    Debit Cards make transactions fast, easy and convenient to use. We accept all major Credit and Debit
+                    Cards.
+                  </div>
+                  <div class="payment__box-img">
+                    <img src="img/payment1.png" alt="visa">
+                  </div>
+                </div>
+
+                <div class="payment__box-row">
+                  <div class="payment__box-btn">
+                    <input class="payment-method" type="radio" name="pay" id="paypal" value="paypal">
+                    <label for="paypal">Paypal</label>
+                  </div>
+                  <div class="payment__box-text">
+                    Paypal is the faster and safer way to send money worldwide. Payment can be
+                    made via your PayPal account or by card through the PayPal payment system.
+                  </div>
+                  <div class="payment__box-img">
+                    <img src="img/payment2.png" alt="visa">
+                  </div>
+                </div>
+
+                <div class="payment__box-row">
+                  <div class="payment__box-btn">
+                    <input class="payment-method" type="radio" name="pay" id="transfer" value="bank">
+                    <label for="transfer">Bank Transfer</label>
+                  </div>
+                  <div class="payment__box-text">
+                    Make your payment directly into our bank account. Please use your name as the payment reference and
+                    save a payment confirmation.
+                  </div>
+                  <div class="payment__box-img">
+                    <img src="img/payment3.png" alt="visa">
+                  </div>
+                </div>
+
+
+
+                <div class="payment__box-row">
+                  <div class="payment__box-btn">
+                    <input class="payment-method" type="radio" name="pay" id="cash" value="cash">
+                    <label for="cash">Pay by phone</label>
+                  </div>
+                  <div class="payment__box-text">
+                    Please call <a href="tel:07 999 744 743">07 999 744 743 </a> and our friendly Customer Service team will help you to complete payment. 
+                  </div>
+                  <div class="payment__box-img">
+                    <img src="img/payment5.png" alt="">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <button type="button" class="payment-btn payment__form-btn" data-bs-toggle="modal">
+              submit
+            </button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <h5 class="modal-title" id="exampleModalLabel">PAYMENT CONFIRMATION</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div class="modal-body">
+                    <ul class="modal-list">
+                      <li>
+                        <strong>Name:</strong>
+                        <span class="name"></span>
+                      </li>
+                      <li>
+                        <strong>Surname:</strong>
+                        <span class="surename"></span>
+                      </li>
+                      <li>
+                        <strong>Amount:</strong>
+                        <span class="amount"></span>
+                      </li>
+                      <li class="fee-wrap">
+                        <strong>Commission:</strong>
+                        <span class="fee">3.5%</span>
+                      </li>
+                      <li class="total-wrap">
+                        <strong>Total:</strong>
+                        <span class="total"></span>
+                      </li>
+                    </ul>
+
+                    <div class="bank__info">
+                      <table>
+                        <tr>
+                          <th>Account Name: </th>
+                          <td>Certified Translation Services LTD</td>
+                        </tr>
+                        <tr>
+                          <th>Bank: </th>
+                          <td>
+                            <p>HSBC</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>A/C Number:</th>
+                          <td>
+                            <p>40274054</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Sort Code:</th>
+                          <td>40 20 55</td>
+                        </tr>
+                        <tr>
+                          <th>For international payments:</th>
+                        </tr>
+                        <tr>
+                          <th>IBAN: </th>
+                          <td>GB23 HBUK 4020 5540 2740 54</td>
+                        </tr>
+                        <tr>
+                          <th>BIC:</th>
+                          <td>HBUKGB4B</td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <div class="cash__info">
+                      Please call <a href="tel:07 999 744 743">07 999 744 743 </a> and our friendly Customer Service team will help you to complete payment. 
+                    </div>
+
+
+
+
+                    <button class="payment-btn modal-payment-btn">Confirm</button>
+                    <div class="modal-payment-text">
+                      Please transfer funds to above the bank account and don't forget to send us payment confirmation
+                      so we could start working on your order. Thanks you for your business!
+                    </div>
+                    <button type="button" class="payment-btn modal-payment-close" data-bs-dismiss="modal"
+                      aria-label="Close">Close</button>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-lg-3 col-md-6">
+          <div class="footer__item">
+            <span>Tel:</span>
+            <a href="tel:07 999 744 743">07 999 744 743</a>
+          </div>
+
+          <div class="footer__item">
+            <span>Email:</span>
+            <a href="mailto:info@document-translations.co.uk">info@document-translations.co.uk</a>
+          </div>
+        </div>
+
+
+        <div class="col-lg-5 col-md-6">
+          <div class="footer__item">
+            <span>Address:</span>
+            <a target="_blank" href="https://goo.gl/maps/a4mhsZiSNmXq1r1B7">info@16 Inns Court, WineTavern Street,
+              Dublin
+              8, D08DV20.ie</a>
+          </div>
+
+          <div class="footer__item">
+            <span>Web:</span>
+            <a target="_blank" href="https://document-translations.co.uk/">www.document-translations.co.uk </a>
+          </div>
+
+        </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="footer__info">
+            Reg in ROI | VAT: 9829367V | CRO: 512530
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
